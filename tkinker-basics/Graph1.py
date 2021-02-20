@@ -10,6 +10,11 @@ from matplotlib.figure import Figure
 root = Tk()
 root.wm_title('Embedding in Tk')
 
+# an edit text
+entry = Entry(root, width=50, borderwidth=2)
+entry.pack()
+entry.insert(0, 'Enter your name: ')
+
 fig = Figure(figsize=(5, 4), dpi=100)
 t = np.arange(0, 3, 0.01)
 fig.add_subplot(111).plot(t, 2 * np.sin(2 * np.pi * t))
